@@ -506,7 +506,7 @@ The [GitHub workflow](.github/workflows/evaluation-tests.yml) checks dependency 
 Python syntax and software tests on Ubuntu and Windows, then uploads dependency, JUnit and
 coverage evidence. It does not invoke paid evaluation benchmarks. Ten real-model tests remain
 disabled by default. The workflow supports pull requests, pushes to `main`/`master`, and manual dispatch. Consult
-[your repository Actions](https://github.com/jshalaka/rag-ai-quality-evaluation/actions) for actual run results.
+[your repository Actions](https://github.com/jshalaka/rag-eu-ai-act-gdpr/actions) for actual run results.
 
 Local pytest success does not establish GitHub success. The workflow installs open dependency
 ranges rather than using the committed uv lockfile. Lint and strict type checks for the full
