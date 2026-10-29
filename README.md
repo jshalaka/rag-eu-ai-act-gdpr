@@ -186,6 +186,7 @@ Security tests exercise a limited set of user attacks and controlled injected co
 
 
 ## Project at a glance
+
 | Item | Current implementation |
 |---|---|
 | Source documents | GDPR PDF and Parliament AI Act first-reading PDF |
@@ -205,6 +206,7 @@ Security tests exercise a limited set of user attacks and controlled injected co
 These describe the implementation and recorded runs, not an enforced configuration for every deployment.
 
 ## What happens at each application stage
+
 | Stage | Input | Implementation | Output |
 |---|---|---|---|
 | 1. Load | PDFs under `data/raw/` | PyMuPDF extracts text by page; signature detection identifies the regulation | Page text with source and regulation identity |
@@ -254,6 +256,7 @@ A surviving citation does not prove that every sentence is supported. That is wh
 also evaluates claim grounding.
 
 ## Understanding the metrics
+
 Suppose a question expects four sources and retrieval finds three:
 
 | Metric | Example result | Meaning |
@@ -288,6 +291,7 @@ retrieval timing; it must not be silently reclassified as a successful refusal. 
 retrieval-plus-generation timing.
 
 ## Implementation and file responsibilities
+
 Paths below are relative to `src/rag_eu_law/` unless shown otherwise.
 
 | Files / classes | Responsibility |
@@ -369,6 +373,7 @@ For a model-only change, re-ingestion is normally unnecessary. Changing the embe
 corpus requires rebuilding the index and establishing fresh compatible evaluation evidence.
 
 ## Running the evaluation
+
 Use a new output directory for each execution. The [runbook](docs/evaluation/RUNBOOK.md)
 contains full commands, prerequisites and exit-code explanations.
 
@@ -458,6 +463,7 @@ Reference/robustness inputs are versioned. Historical Markdown summary reports a
 See the [dataset and evidence policy](eval/README.md) before sharing generated artifacts.
 
 ## Recorded results and their limits
+
 These are recorded local observations, not a claim of independent reproduction or production readiness.
 
 | Area | Recorded observation | Interpretation |
@@ -476,6 +482,7 @@ not committed, so a clean checkout needs new runs or separately supplied artifac
 those reports.
 
 ## Project structure
+
 | Path | Responsibility |
 |---|---|
 | `src/rag_eu_law/domain/` | Models, protocols, constants and exceptions |
@@ -494,6 +501,7 @@ those reports.
 | `cloud/`, `docker/`, `supabase/` | Deployment entrypoints and database migration |
 
 ## CI, remaining work and documentation
+
 The [GitHub workflow](.github/workflows/evaluation-tests.yml) checks dependency consistency,
 Python syntax and software tests on Ubuntu and Windows, then uploads dependency, JUnit and
 coverage evidence. It does not invoke paid evaluation benchmarks. Ten real-model tests remain

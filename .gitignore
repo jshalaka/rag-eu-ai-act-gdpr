@@ -1,0 +1,28 @@
+.venv/
+.env
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+data/processed/*
+!data/processed/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/history.sqlite*
+.claude/
+.DS_Store
+*.egg-info/
+docker.env
+
+
+# Local evaluation evidence and CI-generated reports (inputs remain versioned).
+/eval/runs/
+/eval/calibration/
+/ci-reports/
+/htmlcov/
+/coverage.xml
+
+# Public portfolio copy: keep source documents and raw execution evidence local.
+*.pdf
+eval/**/results.json

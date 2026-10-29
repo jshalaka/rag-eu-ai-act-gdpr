@@ -1,0 +1,13 @@
+# Dependencies for Streamlit Community Cloud (deliberately minimal: no PyTorch, no Chroma).
+# Community Cloud uses the first dependency file it finds, starting next to the entrypoint, so
+# this file wins over the repo-root uv.lock. Use Python 3.11 or 3.12 in the app's advanced settings.
+pydantic==2.14.1
+pydantic-settings==2.16.0
+pymupdf==1.28.2
+pyyaml==6.0.3
+rank-bm25==0.2.2
+fastembed==0.9.0
+openai==3.35.1
+httpx==0.28.1
+supabase==2.33.0
+streamlit==1.66.0
